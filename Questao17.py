@@ -1,14 +1,17 @@
 ''' Peça para o usuário digitar 3 nomes e crie uma tupla com esses nomes.
  Em seguida, verifique quantas vezes o nome 'Maria' aparece na tupla.
  '''
-nome01 = input('Digite o primeiro nome: ')
-nome02 = input('Digite o segundo nome: ')
-nome03 = input('Digite o terceiro nome: ')
 
-nomes = (nome01, nome02, nome03)
+names = []
+
+for i in range(3):
+    nome01 = input(f'Digite o {i+1}º nome: ')
+    names.append(nome01)
+
+
+nomes = tuple(names)
 
 quantidadeMaria = 0
-
 
 for n in range(len(nomes)):
     if nomes[n].lower() == 'maria':
