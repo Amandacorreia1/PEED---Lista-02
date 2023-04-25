@@ -17,7 +17,7 @@ for i in range(num_arestas):
     
 a, b = input('Qual das arestas voce deseja remover? ').split()
 
-if a in grafo and b in grafo[a]:
+if a in grafo and b in grafo:
     grafo[a].remove(b)
     grafo[b].remove(a)
     print('A aresta foi removida!')
